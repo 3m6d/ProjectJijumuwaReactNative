@@ -1,0 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    dependencies {
+        // Updated Android Gradle Plugin (AGP) compatible with Java 17 and RN 0.76.5
+        classpath 'com.android.tools.build:gradle:8.0.2'
+
+        // Remove the explicit React Native Gradle Plugin dependency since it is now included via settings.gradle
+        //classpath 'com.facebook.react:react-native-gradle-plugin:0.71.19'
+
+        // Kotlin plugin aligned with ext.kotlinVersion
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+
+// Apply the React Native root project plugin if needed
+apply plugin: "com.facebook.react.rootproject"
+
+allprojects {
+    repositories {
+        maven { url "$rootDir/../node_modules/react-native/android" }
+        maven { url "$rootDir/../node_modules/jsc-android/dist" }
+        google()
+        mavenCentral()
+        maven { url 'https://www.jitpack.io' }
+    }
+}
