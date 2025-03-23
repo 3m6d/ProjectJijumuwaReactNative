@@ -1,0 +1,8 @@
+# frontend-requirements.txt
+react-native-feather@^1.1.2  # Feather icons for UI
+@react-native-community/slider@^4.5.0  # Slider component for music player
+react-native-track-player@^2.1.4  # Music playback
+@react-navigation/native@^6.1.17  # Navigation
+@react-navigation/stack@^6.3.29  # Stack navigator
+@react-native-async-storage/async-storage@^1.23.0  # Persistent storage
+react-native@^0.73.6  # Core React Native
