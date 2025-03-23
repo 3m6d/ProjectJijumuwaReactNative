@@ -1,3 +1,5 @@
+ERROR
+
 Welcome to Gradle 7.6!
 Here are the highlights of this release:
  - Added support for Java 19.
